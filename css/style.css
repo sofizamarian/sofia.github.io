@@ -1,0 +1,113 @@
+/*Para evitar los margenes automaticos declaramos un padding y un margin de 0*/
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Este es el estilo de nuestra cabecera*/
+header{
+    /*Atributo: valor;*/
+    
+    /*Tamaños*/
+    width: 100%;
+    max-width: 100%;
+    height: 50px;
+    min-height: 50px;
+    
+    position: relative;
+    
+    /*Color*/
+    background: black;
+    
+    /*Margenes*/
+    margin: 0;
+    
+    /*Qué sucede en caso de que el contenido de esta caja sobrepase el tamaño de la caja*/
+    overflow: hidden;
+    
+    /*Cómo se comporta esta caja*/
+    display: block;
+}
+
+/*Cosa inmunda es la envoltura donde definiremos los contenidos de la cabecera*/
+#envoltura{
+    
+    /*Cómo se comporta*/
+    display: block;
+    
+    /*Paddings*/
+    padding-right: 20px;
+    padding-left: 20px;
+    
+    margin: 0 auto;
+}
+
+/*Este es el estilo de la barra de navegación*/
+nav{
+    /*La barra se comporta como un bloque*/
+    display: block;
+    
+    /*La barra se va acomodar a la derecha*/
+    float:right;
+    
+    /*El color de la barra*/
+    background: black;
+    
+    /*Nos cercioramos que no haya espaciado "raro" en la parte de arriba*/
+    margin-top: 0px;
+    
+    font-family: Alieron-Heavy;
+    
+}
+
+/*El estilo de la lista*/
+nav ul{
+    margin: 0px;
+    padding: 0px;
+    
+    /*Definimos que la altura de la lista va a ser la misma que la de la caja que la contiene (El nav)*/
+    height: inherit;
+    
+}
+
+nav ul li{
+    text-align: center;
+    height: inherit;
+    width: 100px;
+    
+    /*Con esto definimos que las cajas se van a acomodar una despues de otra horizontalmente*/
+    display: inline-block;
+    
+    
+    
+    margin:10px;/*Margen de todos los lados en uno solo*/
+    
+    /*Paddings individuales*/
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    
+    
+    border: 1px dashed blue;
+    
+                /*Atributo que queremos cambiar*/
+                /*Duración*/
+                /*Estilo de transición*/
+    transition: background-color 0.3s ease; 
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Cuando pasamos el puntero sobre cada item de la barra */
+nav ul li:hover{
+    background-color: yellow;
+}
+
+@font-face{
+    font-family: Alieron-Heavy;
+    src: url(../src/Aileron-Heavy.otf)
+}
